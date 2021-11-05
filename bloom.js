@@ -1,3 +1,9 @@
+/*todo
+  1. count the number of words in the file
+  2. initialize Bloom filter test with a single word and check the bits that are set
+  3. 
+*/
+
 fs = require("fs");
 
 function load(file) {
