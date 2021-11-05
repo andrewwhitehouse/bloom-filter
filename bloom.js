@@ -1,5 +1,18 @@
+fs = require("fs");
+
 function load(file) {
-  return 0;
+  // let wordsArr = "";
+  let wordsArr = fs.readFileSync(`${file}`, "utf8", function (err, data) {
+    if (err) {
+      return console.log(err);
+    }
+    wordsArr = data.split("\r\n");
+    console.log(wordsArr.length);
+    return wordsArr;
+  });
+  return wordsArr.length;
 }
 
-module.exports = {load};
+load("words");
+
+module.exports = { load };
