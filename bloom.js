@@ -12,10 +12,10 @@ function load(file) {
     if (err) {
       return console.log(err);
     }
-    wordsArr = data.split("\r\n");
-    console.log(wordsArr.length);
     return wordsArr;
   });
+  wordsArr = wordsArr.split("\n");
+  console.log(wordsArr.length);
   return wordsArr.length;
 }
 
